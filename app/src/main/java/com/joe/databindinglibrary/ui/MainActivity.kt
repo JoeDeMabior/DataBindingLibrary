@@ -5,6 +5,7 @@ import android.os.Bundle
 import androidx.databinding.DataBindingUtil
 import com.joe.databindinglibrary.R
 import com.joe.databindinglibrary.databinding.ActivityMainBinding
+import com.joe.databindinglibrary.listener.ClickListener
 import com.joe.databindinglibrary.model.Contact
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -16,5 +17,8 @@ class MainActivity : AppCompatActivity() {
         val contact = Contact("Joe", "Deng")
         binding.contact = contact
         setSupportActionBar(toolbar)
+
+        val listener = ClickListener(this)
+        binding.content.click = listener
     }
 }

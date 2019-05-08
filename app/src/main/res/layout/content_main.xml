@@ -2,9 +2,15 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android">
 
     <data>
+
         <variable
             name="contact"
             type="com.joe.databindinglibrary.model.Contact" />
+
+        <variable
+            name="click"
+            type="com.joe.databindinglibrary.listener.ClickListener" />
+
     </data>
 
     <LinearLayout
@@ -28,6 +34,12 @@
             android:text="@{contact.lastName}"
             android:textSize="20sp"
             android:textStyle="bold" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/simple_click"
+            android:onClick="@{click::simpleButtonClick}"/>
 
     </LinearLayout>
 
