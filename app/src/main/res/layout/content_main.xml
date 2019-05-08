@@ -41,6 +41,12 @@
             android:text="@string/simple_click"
             android:onClick="@{click::simpleButtonClick}"/>
 
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/simple_long_click"
+            android:onLongClick="@{click::simpleButtonLongClick}"/>
+
     </LinearLayout>
 
 </layout>

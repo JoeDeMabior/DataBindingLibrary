@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">DataBindingLibrary</string>
     <string name="simple_click">Simple Click</string>
+    <string name="simple_long_click">Simple Long Click</string>
 </resources>
