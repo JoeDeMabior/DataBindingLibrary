@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bind="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.MainActivity">
 
     <data>
 
@@ -14,21 +17,17 @@
         android:layout_margin="30dp"
         android:orientation="vertical">
 
-        <TextView
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:text="@{contact.firstName}"
-            android:textSize="20sp"
-            android:textStyle="bold" />
+            android:layout_height="?attr/actionBarSize"
+            android:elevation="4dp"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:text="@{contact.lastName}"
-            android:textSize="20sp"
-            android:textStyle="bold" />
+        <include
+            android:id="@+id/content"
+            layout="@layout/content_main"
+            bind:contact="@{contact}"/>
 
     </LinearLayout>
 
