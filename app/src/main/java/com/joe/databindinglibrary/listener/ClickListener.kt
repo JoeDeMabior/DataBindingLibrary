@@ -1,25 +1,15 @@
 package com.joe.databindinglibrary.listener
 
-import android.content.Context
 import android.view.View
-import android.widget.Toast
-import com.joe.databindinglibrary.model.Contact
+import android.widget.EditText
+import com.joe.databindinglibrary.ui.MainActivity.Companion.user
 
-class ClickListener(var context: Context) {
+class ClickListener(var fName: EditText, var lName: EditText) {
 
-    fun simpleButtonClick(view: View) {
-        Toast.makeText(context, "Simple Button Click.", Toast.LENGTH_SHORT).show()
-    }
-
-    fun simpleButtonLongClick(view: View): Boolean {
-        Toast.makeText(context, "Simple Button Long Click.", Toast.LENGTH_SHORT).show()
-        return false
-    }
-
-    fun simpleButtonClickWithParams(view: View, contact: Contact) {
-        Toast.makeText(context, "Simple Button Click With Parameters.\n" +
-                "First Name: ${contact.firstName}\n" +
-                "Last Name: ${contact.lastName}",
-            Toast.LENGTH_SHORT).show()
+    fun updateUser(view: View) {
+        user.userFirstName = fName.text.toString()
+        user.userLastName = lName.text.toString()
+        fName.setText("")
+        lName.setText("")
     }
 }

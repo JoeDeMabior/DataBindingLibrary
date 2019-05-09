@@ -3,4 +3,7 @@
     <string name="simple_click">Simple Click</string>
     <string name="simple_long_click">Simple Long Click</string>
     <string name="simple_click_with_params">Simple Click With Params</string>
+    <string name="enter_first_name">Enter first name</string>
+    <string name="enter_last_name">Enter last name</string>
+    <string name="update_name">Update Name</string>
 </resources>
